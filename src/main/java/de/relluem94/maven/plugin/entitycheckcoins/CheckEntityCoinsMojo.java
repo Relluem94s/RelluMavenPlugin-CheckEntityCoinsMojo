@@ -56,6 +56,22 @@ public class CheckEntityCoinsMojo extends AbstractMojo {
                     getLog().warn("Entity missing in enum: " + type.name());
                 }
             }
+            
+            for (String enumName : enumNames) {
+                if ("UNKNOWN".equals(enumName)) {
+                    continue;
+                }
+                boolean exists = false;
+                for (EntityType type : EntityType.values()) {
+                    if (type.name().equals(enumName)) {
+                        exists = true;
+                        break;
+                    }
+                }
+                if (!exists) {
+                    getLog().warn("Enum contains value not in EntityType: " + enumName);
+                }
+            }
 
         } catch (Exception e) {
             throw new MojoExecutionException("EntityCoins class not found in project", e);
