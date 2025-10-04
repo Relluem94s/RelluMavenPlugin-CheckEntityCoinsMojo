@@ -12,6 +12,20 @@
 
     <name>Entity Check Coins Plugin</name>
     <description>Maven Plugin to Check Bukkit EntityType against EntityCoins Enum</description>
+    
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Relluem94s Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/Relluem94s/RelluMavenPlugin-CheckEntityCoinsMojo</url>
+        </repository>
+    </distributionManagement>
+    <scm>
+        <connection>scm:git:git@github.com:Relluem94s/RelluMavenPlugin-CheckEntityCoinsMojo.git</connection>
+        <developerConnection>scm:git:git@github.com:Relluem94s/RelluMavenPlugin-CheckEntityCoinsMojo.git</developerConnection>
+        <url>https://github.com/Relluem94s/RelluMavenPlugin-CheckEntityCoinsMojo</url>
+    </scm>
+    
     <repositories>
         <repository>
             <id>central</id>
