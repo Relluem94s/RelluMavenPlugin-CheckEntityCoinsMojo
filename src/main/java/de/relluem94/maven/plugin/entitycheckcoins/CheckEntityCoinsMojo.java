@@ -36,7 +36,7 @@ public class CheckEntityCoinsMojo extends AbstractMojo {
             ClassLoader projectClassLoader = new URLClassLoader(urls, this.getClass().getClassLoader());
 
             Class<?> enumClass = Class.forName(
-                "de.relluem94.minecraft.server.spigot.essentials.constants.EntityCoins",
+                "de.relluem94.minecraft.server.spigot.essentials.enums.EntityCoins",
                 true,
                 projectClassLoader
             );
